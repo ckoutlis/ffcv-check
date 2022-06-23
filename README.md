@@ -37,7 +37,9 @@ workers increases. More precisely, when 8 workers are utilized it reaches simila
 performance as the FFCV on CPU but more than double the time of FFCV on CUDA.
 These results are consistent across different number of epochs including 1 in contrast
 to FFCV.
+
 ![average data loading time across epochs per dataloader (ffcv, torch), device (cpu, cuda), number of workers and number of epochs](results/cifar10_loading.jpg)
+
 The next figure shows the difference in performance between the two dataloaders
 in all device combinations. It is obvious that in most cases (30/36=83.3% when 
 FFCV-CUDA and PyTorch-CPU) FFCV outperforms PyTorch. If we exclude the experiments
@@ -47,10 +49,13 @@ it is for PyTorch. Additionally, the average PyTorch/FFCV loading time ratio is 
 on the CPU-based comparison (std 0.9, min 0.3, max 3.7), 22.0 on the CUDA-based 
 comparison (std 12.1, min 3.4, max 34.3) and 7.5 when FFCV uses CUDA and PyTorch uses
 CPU (std 7.1, min 0.6, max 30.5). 
+
 ![average data loading time difference between ffcv and standard torch dataloaders among all device combinations](results/cifar10_loading_diff.jpg)
+
 Finally, in terms of training time using the best configurations of both FFCV and PyTorch
 it observed that with 0 workers there is a significant difference in favor of FFCV
 while with 8 workers this difference exists but is reduced to minimum.
+
 ![training time comparison between ffcv and torch dataloader for 0 and 8 number of workers](results/cifar10_training.jpg)
 
 ## Conclusions
