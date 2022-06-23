@@ -207,7 +207,7 @@ for i in torch:
         plt.ylabel("epochs")
         plt.title(f"torch[{i}] - ffcv[{j}]")
         c += 1
-plt.savefig("results/cifar10_loaging_diff.jpg")
+plt.savefig("results/cifar10_loading_diff.jpg")
 
 plt.figure(figsize=(9, 6))
 center = np.arange(9)

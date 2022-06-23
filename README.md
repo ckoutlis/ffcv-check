@@ -19,3 +19,5 @@ and cifar10_results.py will process them and provide us with meaningful figures.
 
 ## Results
 ![alt text](results/cifar10_loading.jpg)
+![alt text](results/cifar10_loading_diff.jpg)
+![alt text](results/cifar10_training.jpg)
