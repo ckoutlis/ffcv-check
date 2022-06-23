@@ -16,3 +16,6 @@ the standard PyTorch dataloader. The corresponding results will be stored under 
 and cifar10_results.py will process them and provide us with meaningful figures.
 
 ## Scenarios
+
+## Results
+![alt text](results/cifar10_loading.jpg)
