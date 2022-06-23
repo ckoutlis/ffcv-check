@@ -207,6 +207,7 @@ for i in torch:
         plt.ylabel("epochs")
         plt.title(f"torch[{i}] - ffcv[{j}]")
         c += 1
+plt.savefig("results/cifar10_loaging_diff.jpg")
 
 plt.figure(figsize=(9, 6))
 center = np.arange(9)
@@ -254,6 +255,9 @@ plt.xlabel("num_workers")
 plt.ylabel("loading time/epoch")
 plt.title("torch[cpu]")
 
+plt.savefig("results/cifar10_loading.jpg")
+
+# training
 with open("results/cifar10_timeit_train.pickle", "rb") as h:
     times_train = pickle.load(h)
     print("\nTraining experiment:")
@@ -279,5 +283,4 @@ plt.xticks(center, [0, 8])
 plt.xlabel("num_workers")
 plt.ylabel("training time")
 
-
-plt.show()
+plt.savefig("results/cifar10_training.jpg")
